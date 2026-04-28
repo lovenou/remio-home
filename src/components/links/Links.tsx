@@ -2,7 +2,7 @@
  * @Author: kasuie
  * @Date: 2024-05-22 19:32:38
  * @LastEditors: kasuie
- * @LastEditTime: 2025-06-16 10:01:57
+ * @LastEditTime: 2026-04-28 15:25:40
  * @Description:
  */
 "use client";
@@ -77,7 +77,7 @@ export function Links({
           <div className="absolute left-[20px] right-0 top-24 z-[-1] h-[25rem] w-[25rem] rotate-[-36deg] rounded-full bg-[#3651cf26] duration-500 group-hover/main:left-[-20px] group-hover/main:top-[-20px]"></div>
         )} */}
         {item.icon && (
-          <div className="p-[5px]">
+          <div className="shrink-0 p-[5px]">
             <Image
               alt={item.title}
               src={item.icon}
@@ -93,9 +93,11 @@ export function Links({
           </div>
         )}
         <div className="p-[5px]">
-          {item.title && <p className="text-white">{item.title}</p>}
+          {item.title && <p className="truncate text-white">{item.title}</p>}
           {item.desc && (
-            <p className="pt-[10px] text-[15px] text-white/70">{item.desc}</p>
+            <p className="truncate pt-[10px] text-[15px] text-white/70">
+              {item.desc}
+            </p>
           )}
         </div>
         <span className="absolute bottom-[5px] right-[7px] text-white/70">
